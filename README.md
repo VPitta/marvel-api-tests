@@ -157,11 +157,13 @@ MARVEL-API-TESTS
 
 <h2 align="center">👨‍💻 Autor</h2>
 
-**Vinicius Gonçalves da Silva Pita**  
-🎯 Desenvolvedor em formação | QA & Automação de Testes | Java & JavaScript  
+<p align="center"><b>Vinicius Gonçalves da Silva Pita</b></p>  
+<p align="center">🎯 Desenvolvedor em formação | QA & Automação de Testes | JavaScript | Cypress | Postman </p>  
 
-📎 [LinkedIn](https://www.linkedin.com/in/vinicius-pita)  
-📁 [GitHub](https://github.com/VPitta)
+<p align="center">
+<a href="https://www.linkedin.com/in/vinicius-pita/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+<a href="https://github.com/VPitta"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
+</p>
 
 ---
 
