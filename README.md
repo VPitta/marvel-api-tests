@@ -1,8 +1,9 @@
 <h1 align="center">🦸‍♂️ Marvel API Tests</h1>
 
 <p align="center">
-Projeto de testes da <b>Marvel Comics API</b>, realizado como parte do estudo de automação de testes com <b>Postman</b> e <b>Cypress</b>.  
-O objetivo é validar os principais endpoints da API da Marvel, garantindo que os dados de personagens, HQs e séries sejam retornados corretamente e estejam de acordo com as regras de autenticação da API.
+Projeto completo de QA e automação de testes, utilizando a <b>Marvel Comics API</b>.  
+O objetivo é validar os principais endpoints da API, garantindo que os dados de personagens, HQs e séries sejam retornados corretamente e que a interface responda corretamente.
+
 </p>
 
 <p align="center">
@@ -15,7 +16,7 @@ O objetivo é validar os principais endpoints da API da Marvel, garantindo que o
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+<h2 align="center">🚀 Tecnologias Utilizadas</h2>
 
 <div align="center">
 
@@ -31,7 +32,7 @@ O objetivo é validar os principais endpoints da API da Marvel, garantindo que o
 
 ---
 
-## 🔗 Endpoints Testados
+<h2 align="center">🔗 Endpoints Testados</h2>
 
 ### 🔹 Characters
 - `/v1/public/characters` → Lista todos os personagens  
@@ -47,7 +48,7 @@ O objetivo é validar os principais endpoints da API da Marvel, garantindo que o
 
 ---
 
-## 🔐 Autenticação
+<h2 align="center">🔐 Autenticação</h2>
 
 A Marvel API exige autenticação com os parâmetros:
 - `ts` → timestamp  
@@ -59,19 +60,23 @@ A Marvel API exige autenticação com os parâmetros:
 
 ---
 
-## 🧭 Roadmap do Projeto
+<h2 align="center">🧭 Roadmap do Projeto</h2>
 
+<div align="center">
+  
 | Semana | Atividade | Status |
 |:------:|:-----------|:------:|
 | 🗓️ 1 | Configuração do ambiente e autenticação | ✅ Concluído |
 | 🗓️ 2 | Testes de API com Postman e Cypress | ✅ Concluído |
 | 🗓️ 3 | Testes manuais e comparativos | ✅ Concluído |
-| 🗓️ 4 | Testes E2E com interface web simples | ⚙️ Em andamento |
+| 🗓️ 4 | Testes E2E com interface web simples | ✅ Concluído |
 | 🗓️ 5 | Refinamento e documentação final | 🕓 Pendente |
+
+</div>
 
 ---
 
-### 📅 Detalhamento das Semanas
+<h2 align="center">📅 Detalhamento das Semanas</h2>
 
 #### 🧰 Semana 1 – Configuração do Ambiente
 - Criação de conta no [Marvel Developer Portal](https://developer.marvel.com/)  
@@ -97,14 +102,16 @@ A Marvel API exige autenticação com os parâmetros:
 - Testes E2E no Cypress validando integração  
 ✅ **Status:** Concluído  
 
-#### 📘 Semana 5 – Refinamento e Documentação Final
-- Organização final do repositório  
-- Preparação para portfólio  
-🕓 **Status:** Pendente  
+### 📘 Semana 5 – CI/CD e Documentação Final
+- Configuração de pipelines no **GitHub Actions** para execução automática dos testes Cypress e Postman  
+- Integração contínua: testes rodando a cada push ou PR  
+- Organização final do repositório e preparação para portfólio  
+🕓 **Status:** Pendente
 
 ---
 
-## 🗃️ Estrutura do Projeto
+<h2 align="center">🗃️ Estrutura do Projeto</h2>
+
 ```
 MARVEL-API-TESTS
 │
@@ -132,22 +139,23 @@ MARVEL-API-TESTS
 ```
 ---
 
-## 🧠 Aprendizados
+<h2 align="center">🧠 Aprendizado</h2>
 
 - Autenticação e assinatura de requisições  
 - Escrita de scripts automatizados no Postman  
 - Automação de testes de API e E2E com Cypress  
 - Boas práticas de versionamento e documentação técnica  
 
---- ## 📸 Evidências dos Testes 
-📷 **Postman:** Status 200 e validações de campos 
+<h2 align="center"> 📸 Evidências dos Testes </h2>
+
+📷 **Postman:** Status 200 e validações de campos  
 📷 **Cypress:** Logs de execução automatizados
 
-*(as imagens serão adicionadas na pasta /docs/evidences)* ---
+*(as imagens serão adicionadas na pasta /docs/evidences)*
 
 ---
 
-## 👨‍💻 Autor
+<h2 align="center">👨‍💻 Autor</h2>
 
 **Vinicius Gonçalves da Silva Pita**  
 🎯 Desenvolvedor em formação | QA & Automação de Testes | Java & JavaScript  
