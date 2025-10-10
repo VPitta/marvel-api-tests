@@ -160,4 +160,3 @@ MARVEL-API-TESTS
 <p align="center">
   <i>“Testar é garantir que o herói da sua aplicação sobreviva até o próximo deploy.”</i> 🦸‍♂️
 </p>
-```
