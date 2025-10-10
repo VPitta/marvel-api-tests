@@ -1,0 +1,151 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #0d0d0d;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  background-color: #e62429;
+  padding: 25px 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+header h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: 2rem;
+  margin: 0 0 15px 0;
+  color: #fff;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  width: 220px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 10px 20px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #ff1c1c;
+  transform: scale(1.05);
+}
+
+#resultsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px;
+  gap: 25px;
+}
+
+.character-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 15px;
+  width: 200px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  cursor: pointer;
+}
+
+.character-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(230,36,41,0.6);
+}
+
+.character-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.character-card h3 {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.2rem;
+  margin: 0;
+  color: #ffeded;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.details-container {
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.details-container h3 {
+  margin: 15px 0 5px;
+  color: #ffeded;
+}
+
+.details-container ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.details-container li {
+  margin-bottom: 5px;
+}
+
+footer {
+  margin-top: 40px;
+  padding: 15px;
+  background: #111;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.details-search {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: stretch; /* Faz os inputs ocuparem toda a largura do card */
+}
+
+.details-search input {
+  padding: 6px;
+  border-radius: 6px;
+  border: none;
+  font-size: 0.9rem;
+  width: 100%; /* Corrige overflow */
+  box-sizing: border-box;
+}
+
+.details-search button {
+  padding: 6px;
+  border-radius: 6px;
+  border: none;
+  background: #ff1c1c;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%; /* Corrige overflow */
+}
+
+.details-search button:hover {
+  transform: scale(1.05);
+}

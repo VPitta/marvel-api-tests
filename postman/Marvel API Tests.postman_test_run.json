@@ -1,0 +1,154 @@
+{
+	"id": "2306d5d0-8d87-480a-a77b-d2054a808977",
+	"name": "Marvel API Tests",
+	"timestamp": "2025-10-07T15:56:56.320Z",
+	"collection_id": "19352024-ca21f389-6420-43d1-a93c-1ead8e7bdd9c",
+	"folder_id": 0,
+	"environment_id": "19352024-026461ae-8ce7-4663-a13a-eb0743fc2d56",
+	"totalPass": 0,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-10-07T15:56:37.371Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "d3f7c168-c9d6-41f0-9d73-8676713dbf59",
+			"name": "Acessa todos os personagens",
+			"url": "https://gateway.marvel.com/v1/public/characters?ts=1759852597574&apikey=18d184cd7c83b42ff8cd91bbd309f825&hash=3a8184b43bd298895f07a42b260dbce7",
+			"time": 1233,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				1233
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "059a064a-486f-422f-8dc5-1ddb3de0d3ca",
+			"name": "Persoagem - Wolverine",
+			"url": "https://gateway.marvel.com/v1/public/characters?nameStartsWith=Wolverine&ts=1759852599028&apikey=18d184cd7c83b42ff8cd91bbd309f825&hash=d1da8afac94f1096e863140f0ef275d6",
+			"time": 483,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				483
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "f9056a4c-3376-4722-a2df-5c17a85689ee",
+			"name": "Acessa todas as Comics",
+			"url": "https://gateway.marvel.com/v1/public/comics?ts=1759852599598&apikey=18d184cd7c83b42ff8cd91bbd309f825&hash=6015d6a2ca360f7320c3e325f229e900",
+			"time": 7284,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				7284
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "0bdfd17d-c85b-4030-bd52-1c6f92738584",
+			"name": "Comics do Wolverine",
+			"url": "https://gateway.marvel.com/v1/public/comics?characters=1009718&format=comic&ts=1759852606947&apikey=18d184cd7c83b42ff8cd91bbd309f825&hash=31da8b99f980db2df33a94693c736296",
+			"time": 2037,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				2037
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "346a2fd8-f2db-4d13-8e22-e50a77a4339c",
+			"name": "Acessa todas as Series",
+			"url": "https://gateway.marvel.com/v1/public/series?ts=1759852609043&apikey=18d184cd7c83b42ff8cd91bbd309f825&hash=fa4dda96ce8831c9dab7998ac2c440f3",
+			"time": 6356,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				6356
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "2c90f29e-864d-4ae5-b51e-92f951199b3e",
+			"name": "Series e aimações do Wolverine",
+			"url": "https://gateway.marvel.com/v1/public/series?characters=1009718&ts=1759852615486&apikey=18d184cd7c83b42ff8cd91bbd309f825&hash=625dc128a7e917311234a89caa5dfda7",
+			"time": 770,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				770
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 18163,
+	"collection": {
+		"requests": [
+			{
+				"id": "d3f7c168-c9d6-41f0-9d73-8676713dbf59",
+				"method": "GET"
+			},
+			{
+				"id": "059a064a-486f-422f-8dc5-1ddb3de0d3ca",
+				"method": "GET"
+			},
+			{
+				"id": "f9056a4c-3376-4722-a2df-5c17a85689ee",
+				"method": "GET"
+			},
+			{
+				"id": "0bdfd17d-c85b-4030-bd52-1c6f92738584",
+				"method": "GET"
+			},
+			{
+				"id": "346a2fd8-f2db-4d13-8e22-e50a77a4339c",
+				"method": "GET"
+			},
+			{
+				"id": "2c90f29e-864d-4ae5-b51e-92f951199b3e",
+				"method": "GET"
+			}
+		]
+	}
+}
