@@ -6,23 +6,23 @@ describe('Fluxo E2E - Marvel API com fixture', () => {
   });
 
   it('Deve listar Wolverine e ver detalhes de Comics', () => {
-    // Intercepta a API e devolve fixture
+    // Intercepta a API principal de personagens
+    cy.intercept('GET', '/api/characters*', { fixture: 'wolverine.json' }).as('getCharacters');
+
+    // Intercepta a API de detalhes
     cy.intercept('GET', '/api/characters/*/details*', { fixture: 'wolverine-details.json' }).as('getDetails');
 
-
     // Pesquisa o personagem
-    hero.searchField('Wolverine');
+    hero.searchField("Wolverine");
     hero.searchSubmit();
 
-    // Espera o elemento aparecer no DOM
+    // Espera a resposta da API de personagens
+    cy.wait('@getCharacters', { timeout: 15000 });
+
+    // Verifica se o Wolverine apareceu
     hero.elements.searchMessage({ timeout: 15000 })
       .should('be.visible')
       .and('contain', 'Wolverine (LEGO Marvel Super Heroes)');
-
-    // Intercepta detalhes com fixture (opcional)
-    cy.intercept('GET', '/api/characters/*/details*', {
-      fixture: 'wolverine-details.json'
-    }).as('getDetails');
 
     // Pesquisa por Comics e clica em detalhes
     hero.searchComicsField('Avengers');
