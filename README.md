@@ -64,49 +64,49 @@ A Marvel API exige autenticação com os parâmetros:
 
 <div align="center">
   
-| Semana | Atividade | Status |
+| Etapa | Atividade | Status |
 |:------:|:-----------|:------:|
 | 🗓️ 1 | Configuração do ambiente e autenticação | ✅ Concluído |
 | 🗓️ 2 | Testes de API com Postman e Cypress | ✅ Concluído |
 | 🗓️ 3 | Testes manuais e comparativos | ✅ Concluído |
 | 🗓️ 4 | Testes E2E com interface web simples | ✅ Concluído |
-| 🗓️ 5 | Refinamento e documentação final | 🕓 Pendente |
+| 🗓️ 5 | Refinamento e documentação final | ✅ Concluído |
 
 </div>
 
 ---
 
-<h2 align="center">📅 Detalhamento das Semanas</h2>
+<h2 align="center">📅 Detalhamento das Estapas</h2>
 
-#### 🧰 Semana 1 – Configuração do Ambiente
+#### 1 – Configuração do Ambiente
 - Criação de conta no [Marvel Developer Portal](https://developer.marvel.com/)  
 - Geração das chaves pública e privada  
 - Documentação dos endpoints base  
 - Testes de autenticação inicial  
 ✅ **Status:** Concluído  
 
-#### 🧪 Semana 2 – Testes de API com Postman e Cypress
+#### 2 – Testes de API com Postman e Cypress
 - Validação de status code, campos e filtros  
 - Criação de scripts automatizados no Postman  
 - Automação equivalente no Cypress  
 ✅ **Status:** Concluído  
 
-#### 📋 Semana 3 – Testes Manuais e Comparativos
+#### 3 – Testes Manuais e Comparativos
 - Casos de teste documentados (pré-condições, passos e resultados esperados)  
 - Comparação entre Postman (manual) e Cypress (automatizado)  
 ✅ **Status:** Concluído  
 
-#### 💻 Semana 4 – Testes E2E (Front + API)
+#### 4 – Testes E2E (Front + API)
 - Criação de interface simples com HTML + JS  
 - Exibição da lista de personagens e busca por nome  
 - Testes E2E no Cypress validando integração  
 ✅ **Status:** Concluído  
 
-### 📘 Semana 5 – CI/CD e Documentação Final
+### 5 – CI/CD e Documentação Final
 - Configuração de pipelines no **GitHub Actions** para execução automática dos testes Cypress e Postman  
 - Integração contínua: testes rodando a cada push ou PR  
 - Organização final do repositório e preparação para portfólio  
-🕓 **Status:** Pendente
+✅ **Status:** Concluído 
 
 ---
 
