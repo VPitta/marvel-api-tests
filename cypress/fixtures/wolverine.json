@@ -1,0 +1,14 @@
+{
+  "data": {
+    "results": [
+      {
+        "id": 1009718,
+        "name": "Wolverine (LEGO Marvel Super Heroes)",
+        "thumbnail": {
+          "path": "https://example.com/wolverine",
+          "extension": "jpg"
+        }
+      }
+    ]
+  }
+}

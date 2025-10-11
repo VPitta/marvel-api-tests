@@ -1,0 +1,10 @@
+{
+  "comics": [
+    { "title": "Wolverine: First Class #1" },
+    { "title": "X-Men: Days of Future Past" }
+  ],
+  "series": [
+    { "title": "Avengers Assemble" },
+    { "title": "X-Men Animated Series" }
+  ]
+}
