@@ -3,7 +3,7 @@ class Hero {
     elements = {
         searchField: () => cy.get('#searchInput'),
         searchSubmit: () => cy.get('#searchBtn'),
-        searchMessage: () => cy.get('[data-test="search-message"]'),
+        searchMessage: () => cy.get(':nth-child(2) > h3'),
         searchComicsField: () => cy.get('#comic-1009718'),
         searchSeriesField: () => cy.get('#series-1009718'),
         detailsButton: () => cy.get(':nth-child(1) > .details-search > button'),
