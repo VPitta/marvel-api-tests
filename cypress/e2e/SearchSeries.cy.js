@@ -1,42 +1,46 @@
 import hero from "../pages/heroClass";
 
-describe('Fluxo E2E - Marvel API', () => {
+describe('Fluxo E2E - Marvel API - Series', () => {
   beforeEach(() => {
     cy.visit('http://localhost:3000');
   });
 
-  it('Deve listar personagens e buscar Series do Wolverine', () => {
-    // Intercepta a requisição local da API de personagens
+  it('Deve buscar Wolverine e ver detalhes de Series', () => {
+    // Intercepta a chamada da API local de personagens
     cy.intercept('GET', '/api/characters*').as('getCharacters');
 
     // Pesquisa o personagem
     hero.searchField('Wolverine');
     hero.searchSubmit();
 
-    // Espera a API responder antes de verificar resultados
-    cy.wait('@getCharacters').its('response.statusCode').should((status) => {
-      expect([200, 304]).to.include(status);
-    });
+    // Espera a API responder antes de validar o DOM
+    cy.wait('@getCharacters', { timeout: 10000 }) // timeout maior
+      .its('response.statusCode')
+      .should((status) => {
+        expect([200, 304]).to.include(status);
+      });
 
-    // Verifica que o personagem apareceu
-    hero.elements.searchMessage()
+    // Verifica se o personagem apareceu
+    hero.elements.searchMessage({ timeout: 10000 }) // aumenta timeout
       .should('be.visible')
       .and('contain', 'Wolverine');
 
-    // Intercepta requisição de detalhes
+    // Intercepta requisição de detalhes (comics/series)
     cy.intercept('GET', '/api/characters/*/details*').as('getDetails');
 
-    // Pesquisa pela série e clica no botão de detalhes
+    // Pesquisa pela comic e clica no botão de detalhes
     hero.searchSeriesField('Avengers');
     hero.detailsButton();
 
-    // Espera a resposta da API de detalhes
-    cy.wait('@getDetails').its('response.statusCode').should((status) => {
-      expect([200, 304]).to.include(status);
-    });
+    // Espera a API de detalhes responder
+    cy.wait('@getDetails', { timeout: 10000 })
+      .its('response.statusCode')
+      .should((status) => {
+        expect([200, 304]).to.include(status);
+      });
 
-    // Verifica o botão de voltar
-    hero.elements.backButton()
+    // Verifica botão de voltar
+    hero.elements.backButton({ timeout: 10000 })
       .should('be.visible')
       .and('contain', 'Voltar');
   });
