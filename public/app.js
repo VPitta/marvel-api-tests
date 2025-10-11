@@ -24,20 +24,20 @@ async function buscarPersonagens(nome = "", offset = 0) {
       return;
     }
 
-    resultsContainer.innerHTML = data.data.results
-      .map(
-        char => `
-      <div class="character-card">
+resultsContainer.innerHTML = data.data.results
+  .map(
+    char => `
+      <div class="character-card" data-test="hero-result">
         <img src="${char.thumbnail.path}.${char.thumbnail.extension}" alt="${char.name}">
-        <h3>${char.name}</h3>
+        <h3 data-test="search-message">${char.name}</h3>
         <div class="details-search">
           <input type="text" placeholder="Pesquisar comic" id="comic-${char.id}">
           <input type="text" placeholder="Pesquisar série" id="series-${char.id}">
-          <button onclick="verDetalhes(${char.id})">Ver Detalhes</button>
+          <button data-test="details-btn" onclick="verDetalhes(${char.id})">Ver Detalhes</button>
         </div>
       </div>`
-      )
-      .join("");
+  )
+  .join("");
   } catch (err) {
     console.error(err);
     resultsContainer.innerHTML = "<p>Erro ao buscar personagens 😞</p>";
@@ -54,18 +54,17 @@ async function verDetalhes(id) {
     const data = await response.json();
 
     // Renderiza detalhes
-    const detailsHTML = `
-      <div class="details-container">
-        <h2>Detalhes do personagem</h2>
-        <h3>Comics ${comicTitle ? `(Filtrado: ${comicTitle})` : ""}</h3>
-        <ul>${data.comics.map(c => `<li>${c.title}</li>`).join("")}</ul>
-        <h3>Séries ${seriesTitle ? `(Filtrado: ${seriesTitle})` : ""}</h3>
-        <ul>${data.series.map(s => `<li>${s.title}</li>`).join("")}</ul>
-        <button onclick="voltar()">Voltar</button>
-      </div>
-    `;
-
-    resultsContainer.innerHTML = detailsHTML;
+const detailsHTML = `
+  <div class="details-container">
+    <h2>Detalhes do personagem</h2>
+    <h3>Comics ${comicTitle ? `(Filtrado: ${comicTitle})` : ""}</h3>
+    <ul>${data.comics.map(c => `<li>${c.title}</li>`).join("")}</ul>
+    <h3>Séries ${seriesTitle ? `(Filtrado: ${seriesTitle})` : ""}</h3>
+    <ul>${data.series.map(s => `<li>${s.title}</li>`).join("")}</ul>
+    <button data-test="back-btn" onclick="voltar()">Voltar</button>
+  </div>
+`;
+resultsContainer.innerHTML = detailsHTML;
   } catch (err) {
     console.error(err);
     resultsContainer.innerHTML = "<p>Erro ao buscar detalhes 😞</p>";
