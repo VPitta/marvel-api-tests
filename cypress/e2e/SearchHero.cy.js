@@ -14,17 +14,16 @@ describe('Fluxo E2E - Marvel API', () => {
     hero.searchSubmit();
 
     // Espera a resposta da API antes de verificar o DOM
-    cy.wait('@getCharacters')
+    cy.wait('@getCharacters', { timeout: 10000 }) // timeout maior
       .its('response.statusCode')
       .should((status) => {
         expect([200, 304]).to.include(status);
       });
 
     // Depois verifica o conteúdo renderizado
-    hero.elements.searchMessage()
+    hero.elements.searchMessage({ timeout: 10000 }) // timeout maior
       .should('be.visible')
       .and('contain', "Wolverine (LEGO Marvel Super Heroes)");
-
   });
 
   // Existe um command para as outras E2E que faz todo esse teste!!
