@@ -14,7 +14,7 @@ describe('Fluxo E2E - Marvel API', () => {
     hero.searchSubmit();
 
     // Espera a resposta da API antes de verificar o DOM
-    cy.wait('@getCharacters', { timeout: 10000 }) // timeout maior
+    cy.wait('@getCharacters', { timeout: 15000 }) // timeout maior
       .its('response.statusCode')
       .should((status) => {
         expect([200, 304]).to.include(status);
