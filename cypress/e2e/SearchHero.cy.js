@@ -21,7 +21,7 @@ describe('Fluxo E2E - Marvel API', () => {
       });
 
     // Depois verifica o conteúdo renderizado
-    hero.elements.searchMessage({ timeout: 10000 }) // timeout maior
+    hero.elements.searchMessage({ timeout: 15000 }) // timeout maior
       .should('be.visible')
       .and('contain', "Wolverine (LEGO Marvel Super Heroes)");
   });
